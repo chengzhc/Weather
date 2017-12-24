@@ -6,32 +6,266 @@
     android:layout_height="match_parent"
     tools:context="top.chengzhen1971.weather.MainActivity">
 
-    <Button
-        android:id="@+id/btn_refresh"
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="刷新天气"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <TextView
-        android:id="@+id/tv_info"
+        <Button
+            android:id="@+id/btn_today"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="今天天气"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_future"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:text="未来天气"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="48dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@android:color/background_light"
-        android:elevation="2dp"
-        android:padding="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/btn_refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_width="158dp"
+            android:layout_height="110dp"
+            android:text="15"
+            android:textAlignment="textEnd"
+            android:textSize="80sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="37dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:text="℃"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_temp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="110dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/clear" />
+
+        <TextView
+            android:id="@+id/tv_humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="湿度：50%"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_temp" />
+
+        <TextView
+            android:id="@+id/tv_pm25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="PM2.5：100"
+            app:layout_constraintStart_toEndOf="@+id/tv_humidity"
+            app:layout_constraintTop_toBottomOf="@+id/tv_temp" />
+
+        <TextView
+            android:id="@+id/tv_pm10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="PM10：100"
+            app:layout_constraintStart_toEndOf="@+id/tv_pm25"
+            app:layout_constraintTop_toBottomOf="@+id/tv_temp" />
+
+        <TextView
+            android:id="@+id/tv_quality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="空气质量："
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_humidity" />
+
+        <TextView
+            android:id="@+id/tv_sick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="感冒指数："
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_quality" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="日期："
+            app:layout_constraintTop_toBottomOf="@+id/tv_sick"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date"
+            app:srcCompat="@drawable/temp_low" />
+
+        <TextView
+            android:id="@+id/tv_temp_low"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="最低温："
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_temp_low"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date"
+            app:srcCompat="@drawable/temp_high" />
+
+        <TextView
+            android:id="@+id/tv_temp_hi"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="最高温："
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            app:srcCompat="@drawable/sunrise" />
+
+        <TextView
+            android:id="@+id/tv_sunrise"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="日出："
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_sunrise"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            app:srcCompat="@drawable/sunset" />
+
+        <TextView
+            android:id="@+id/tv_sunset"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="日落："
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            app:srcCompat="@drawable/wind" />
+
+        <TextView
+            android:id="@+id/tv_wind"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="风向：风力："
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView7"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7"
+            app:srcCompat="@drawable/walk" />
+
+        <TextView
+            android:id="@+id/tv_notice"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="出行建议："
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView8"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>
