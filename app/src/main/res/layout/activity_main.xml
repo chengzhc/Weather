@@ -51,21 +51,22 @@
             android:id="@+id/tv_temp"
             android:layout_width="158dp"
             android:layout_height="110dp"
+            android:layout_marginTop="8dp"
             android:text="15"
             android:textAlignment="textEnd"
             android:textSize="80sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/et_city" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="37dp"
             android:layout_height="50dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="60dp"
             android:text="℃"
             android:textSize="30sp"
             app:layout_constraintStart_toEndOf="@+id/tv_temp"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/et_city" />
 
         <ImageView
             android:id="@+id/iv_type"
@@ -73,9 +74,10 @@
             android:layout_height="110dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView2"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_city"
             app:srcCompat="@drawable/clear" />
 
         <TextView
@@ -132,10 +134,11 @@
             android:id="@+id/tv_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
             android:text="日期："
-            app:layout_constraintTop_toBottomOf="@+id/tv_sick"
-            tools:layout_editor_absoluteX="8dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sick" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -257,7 +260,6 @@
             android:id="@+id/tv_notice"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -265,7 +267,34 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView8"
-            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView7"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/et_city"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="输入查询城市"
+            android:inputType="textPersonName"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_city"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_city"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@color/colorAccent"
+            android:text="查询"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>

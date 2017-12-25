@@ -46,21 +46,6 @@
             ]
         },
         {
-            "outputFile": "D:\\Teach\\Android\\Weather\\app\\build\\intermediates\\res\\merged\\debug\\values-pa_values-pa.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\cheng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\b48c63c7b64f8144b901e0ba9bd2cb9a\\res\\values-pa\\values-pa.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,161,269,392,497,602,688,788,901,978,1054,1133,1234,1335,1432,1541,1640,1750,1872,1972,2051",
-                        "endColumns": "105,107,122,104,104,85,99,112,76,75,78,100,100,96,108,98,109,121,99,78,100",
-                        "endOffsets": "156,264,387,492,597,683,783,896,973,1049,1128,1229,1330,1427,1536,1635,1745,1867,1967,2046,2147"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "D:\\Teach\\Android\\Weather\\app\\build\\intermediates\\res\\merged\\debug\\values-gu_values-gu.arsc.flat",
             "map": [
                 {
@@ -71,6 +56,21 @@
                         "startOffsets": "55,164,272,395,499,606,693,794,917,994,1072,1152,1258,1360,1457,1566,1665,1775,1896,1999,2079",
                         "endColumns": "108,107,122,103,106,86,100,122,76,77,79,105,101,96,108,98,109,120,102,79,100",
                         "endOffsets": "159,267,390,494,601,688,789,912,989,1067,1147,1253,1355,1452,1561,1660,1770,1891,1994,2074,2175"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\Teach\\Android\\Weather\\app\\build\\intermediates\\res\\merged\\debug\\values-pa_values-pa.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\cheng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\b48c63c7b64f8144b901e0ba9bd2cb9a\\res\\values-pa\\values-pa.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,161,269,392,497,602,688,788,901,978,1054,1133,1234,1335,1432,1541,1640,1750,1872,1972,2051",
+                        "endColumns": "105,107,122,104,104,85,99,112,76,75,78,100,100,96,108,98,109,121,99,78,100",
+                        "endOffsets": "156,264,387,492,597,683,783,896,973,1049,1128,1229,1330,1427,1536,1635,1745,1867,1967,2046,2147"
                     }
                 }
             ]
@@ -303,21 +303,6 @@
             ]
         },
         {
-            "outputFile": "D:\\Teach\\Android\\Weather\\app\\build\\intermediates\\res\\merged\\debug\\values-en-rIN_values-en-rIN.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\cheng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\b48c63c7b64f8144b901e0ba9bd2cb9a\\res\\values-en-rIN\\values-en-rIN.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,267,390,490,598,682,782,897,974,1050,1132,1235,1339,1438,1543,1646,1750,1869,1969,2051",
-                        "endColumns": "103,107,122,99,107,83,99,114,76,75,81,102,103,98,104,102,103,118,99,81,100",
-                        "endOffsets": "154,262,385,485,593,677,777,892,969,1045,1127,1230,1334,1433,1538,1641,1745,1864,1964,2046,2147"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "D:\\Teach\\Android\\Weather\\app\\build\\intermediates\\res\\merged\\debug\\values-h720dp-v13_values-h720dp-v13.arsc.flat",
             "map": [
                 {
@@ -328,6 +313,21 @@
                         "startOffsets": "55",
                         "endColumns": "66",
                         "endOffsets": "117"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\Teach\\Android\\Weather\\app\\build\\intermediates\\res\\merged\\debug\\values-en-rIN_values-en-rIN.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\cheng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\b48c63c7b64f8144b901e0ba9bd2cb9a\\res\\values-en-rIN\\values-en-rIN.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,159,267,390,490,598,682,782,897,974,1050,1132,1235,1339,1438,1543,1646,1750,1869,1969,2051",
+                        "endColumns": "103,107,122,99,107,83,99,114,76,75,81,102,103,98,104,102,103,118,99,81,100",
+                        "endOffsets": "154,262,385,485,593,677,777,892,969,1045,1127,1230,1334,1433,1538,1641,1745,1864,1964,2046,2147"
                     }
                 }
             ]
@@ -707,11 +707,11 @@
                 {
                     "source": "D:\\Teach\\Android\\Weather\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
-                        "startLines": "-1,2,-1",
-                        "startColumns": "-1,4,-1",
-                        "startOffsets": "-1,57,-1",
-                        "endColumns": "-1,46,-1",
-                        "endOffsets": "-1,99,-1"
+                        "startLines": "4,-1,-1",
+                        "startColumns": "4,-1,-1",
+                        "startOffsets": "157,-1,-1",
+                        "endColumns": "45,-1,-1",
+                        "endOffsets": "198,-1,-1"
                     },
                     "to": {
                         "startLines": "118,119,120",

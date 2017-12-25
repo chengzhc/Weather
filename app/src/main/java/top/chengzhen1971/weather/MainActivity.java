@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     TextView tv_temp, tv_humidity, tv_pm25, tv_pm10, tv_quality, tv_sick,
             tv_temp_low, tv_temp_hi, tv_sunrise, tv_sunset, tv_wind, tv_notice, tv_date;
     ImageView iv_type;
+
+    EditText et_city;
+    Button btn_city;
 
 
     @Override
@@ -56,18 +62,31 @@ public class MainActivity extends AppCompatActivity {
         tv_date = findViewById(R.id.tv_date);
 
         iv_type = findViewById(R.id.iv_type);
+
+        et_city = findViewById(R.id.et_city);
+        et_city.setText("上海");
+
+        btn_city = findViewById(R.id.btn_city);
+        btn_city.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getWeatherData();
+            }
+        });
     }
 
     void getWeatherData() {
-        CzLibrary.toast(this, "开始获取天气");
+        //CzLibrary.toast(this, "开始获取天气");
 
         Activity activity = this;
 
         String address = "http://www.sojson.com/open/api/weather/json.shtml";
 
+        final String city = et_city.getText().toString();
+
         HashMap<String, String> paramsMap = new HashMap<String, String>() {
             {
-                put("city", "乌鲁木齐");
+                put("city",city );
             }
         };
 
@@ -130,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
             Log.e("Weather", "todayJson=" + todayJson.toString());
 
 
-            String date = todayJson.getString("date");
+            String date = CzLibrary.getCurrentTime();
             String sunrise = todayJson.getString("sunrise");
             String high = todayJson.getString("high");
             String low = todayJson.getString("low");
@@ -148,6 +167,21 @@ public class MainActivity extends AppCompatActivity {
             tv_sunset.setText("日落：" + sunset);
             tv_wind.setText("风向：" + fx + ",风力：" + fl);
             tv_notice.setText("出行建议：\n" + notice);
+
+            //晴，多云，阴，雨，雪
+            if(type.equals("晴")){
+                iv_type.setImageResource(R.drawable.clear);
+            }else if(type.contains("多云")){
+                iv_type.setImageResource(R.drawable.cloud);
+            }else if(type.contains("阴")){
+                iv_type.setImageResource(R.drawable.overcast);
+            }else if(type.contains("雨")){
+                iv_type.setImageResource(R.drawable.rain);
+            }else if(type.contains("雪")){
+                iv_type.setImageResource(R.drawable.snow);
+            }else {
+                iv_type.setImageResource(R.drawable.temp_high);
+            }
 
 
         } catch (Exception e) {
