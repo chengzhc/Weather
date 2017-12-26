@@ -1,9 +1,7 @@
 package top.chengzhen1971.weather;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -63,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         tv_sunset = findViewById(R.id.tv_sunset);
         tv_wind = findViewById(R.id.tv_wind);
         tv_notice = findViewById(R.id.tv_notice);
-        tv_date = findViewById(R.id.tv_date);
+        tv_date = findViewById(R.id.tv_type);
 
         iv_type = findViewById(R.id.iv_type);
 
