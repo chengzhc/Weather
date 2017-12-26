@@ -1,6 +1,9 @@
 package top.chengzhen1971.weather;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -27,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
     ImageView iv_type;
 
     EditText et_city;
-    Button btn_city;
+    Button btn_city,btn_today,btn_future;
 
-
+    String str_weather;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         initData();
         initView();
 
+        getUserData();
         getWeatherData();
 
     }
@@ -73,10 +77,25 @@ public class MainActivity extends AppCompatActivity {
                 getWeatherData();
             }
         });
+
+        btn_today = findViewById(R.id.btn_today);
+        btn_future = findViewById(R.id.btn_future);
+        btn_future.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToFutureWeather();
+            }
+        });
+    }
+
+    void getUserData(){
+        String city = CzLibrary.loadUserData(this,"city_input","上海");
+        et_city.setText(city);
     }
 
     void getWeatherData() {
-        //CzLibrary.toast(this, "开始获取天气");
+        CzLibrary.saveUserData(this,"city_input",et_city.getText().toString());
+        CzLibrary.saveUserData(this,"input_time",CzLibrary.getCurrentTime());
 
         Activity activity = this;
 
@@ -95,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
             public void onHttpSuccess(String data) {
                 //请求成功后的返回
                 //tv_info.setText(data);
+                str_weather = data;
                 processData(data);
             }
 
@@ -188,6 +208,12 @@ public class MainActivity extends AppCompatActivity {
             CzLibrary.toast(instance, "JSON数据解析异常：" + e);
         }
 
+    }
+
+    void goToFutureWeather(){
+        Intent intent = new Intent(this,FutureActivity.class);
+        intent.putExtra("weatherData",str_weather);
+        startActivity(intent);
     }
 
 

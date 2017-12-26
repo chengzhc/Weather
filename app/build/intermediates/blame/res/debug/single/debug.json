@@ -1632,6 +1632,10 @@
         "source": "C:\\Users\\cheng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\b48c63c7b64f8144b901e0ba9bd2cb9a\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "D:\\Teach\\Android\\Weather\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_future.xml.flat",
+        "source": "D:\\Teach\\Android\\Weather\\app\\src\\main\\res\\layout\\activity_future.xml"
+    },
+    {
         "merged": "D:\\Teach\\Android\\Weather\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
         "source": "C:\\Users\\cheng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\b48c63c7b64f8144b901e0ba9bd2cb9a\\res\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
